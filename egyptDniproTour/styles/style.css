@@ -1,0 +1,125 @@
+/* main styles */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0% 5%;
+    background-color: aqua;
+}
+
+.nav,
+.logo,
+.contact {
+    display: flex;
+    width: 33.3%;
+    background-color: aqua;
+    justify-content: space-around;
+    color: black;
+    text-decoration: none;
+}
+
+.nav__link,
+.logo__link,
+.contact__link {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.contact__link {
+    border: 2px solid black;
+    background-color: tan;
+}
+
+/* 10*/
+.logo__img {
+    width: 20%;
+    text-decoration: none;
+}
+
+.contact {
+    position: relative;
+    text-decoration: none;
+    color: black;
+
+}
+
+.contact__item {
+    display: none;
+}
+
+.contact:hover .contact__item {
+    display: block;
+    position: absolute;
+    top: 111%;
+    right: 28%;
+    text-decoration: none;
+    color: black;
+}
+
+.fixed {    
+    position: fixed;
+    top: 40%;
+    right: 1%;
+    outline: 1px solid black;
+    background-color: slategray;
+}
+
+h2 {
+    text-align: center;
+    margin: 5% 0 0;
+    font-size: 3rem;
+    color: aquamarine;
+}
+
+.form {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: beige;
+}
+
+.main {
+    margin: 0 auto;
+    width: 67%;    
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_vertical {
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0% 0%;
+    position: sticky;
+    top: 43.9%;
+    right: 1%;
+    width: 16.4%;
+    border: 2px solid green;
+}
+
+.nav__item {
+margin: 0 0 5%;
+}
+
+.article__section {
+    border: 2px solid mintcream;
+}
+
+.article__img {
+    width: 50%;
+    display: block;
+}
+
+.form_signIn {
+    display: none;
+}
+
+.form__button_radio:checked~.form_signIn {
+ display: flex;
+}
+
+.form__button_radio:checked~.form_signUp {
+ display: none;
+}

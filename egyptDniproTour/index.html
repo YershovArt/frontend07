@@ -10,41 +10,45 @@
 </head>
 <body>
     <div class="wrapper">
+        <a href="#booktour" class="fixed">
+            <img src="images/airport.png" alt="plane" class="fixed_img">
+        </a>
         <header class="header">
             <logo class="logo">
-                <a href="" class="logo__link">
-                    <img src="" alt="" class="logo__img">
+                <a href="#" class="logo__link">
+                    <img src="images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img">
                 </a>
             </logo>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">
+                        About Egypt
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="pages/joinus.html" class="nav__link">
+                        Join us
+                    </a>
+                </li>
+            </ul>
             <address class="contact">
                 <h3 class="contact__tilte">Contact us</h3>
                 <div class="contact__item">
                     <a href="mailto:egyptdnipro@gmail.com" class="contact__link">
                         egyptdnipro@gmail.com
                     </a>
-                </div>
-                <div class="contact__tilte">
-                    <a href="tel:+13115552368">
+                    <br>
+                    <a href="tel:+13115552368" class="contact__link">
                         (311) 555-2368
                     </a>
                 </div>
             </address>
-            <ul class="nav">
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        About Egypt
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-                        Join us
-                    </a>
-                </li>
-            </ul>
         </header>
+        <h2 class="form__title"> Book tour</h2>
         <form action="https://fom.in.ua/echo" method="POST" class="form">
-            <div class="form__item">
-                <h2 class="form__title"> Book tour</h2>
+            <div class="form__item" id="booktour">
+                <label for="start">trip-start:</label>
+                <input type="phone">
                 <label for="start">trip-start:</label>
                 <input type="date" id="start" name="trip-start" value="" min="2022-01-01" max="2025-12-31">
                 <label for="start">trip end:</label>
@@ -52,53 +56,43 @@
                 <div class="form__item"></div>
             </div>
             <div class="form__item">
-                <label for="adults" class="form__label">number of adults</label>
+                <label for="adults" class="form__label">number of adults:</label>
                 <input type="number" value="" class="form__input" id="adults" name="adults" min="1" max="100">
                 <label for="kids" class="form__label">number of kids:</label>
-                <input type="number" value="" class="form__input" id="adults" name="kids" min="0" max="100">
+                <input type="number" value="" class="form__input" id="kids" name="kids" min="0" max="100">
+                <label for="hotelStars" class="form__label">number of kids:</label>
+                <input type="number" value="" class="form__input" id="stars" name="stars" min="0" max="5">
             </div>
             <div class="form__item">
                 <input type="checkbox" name="allInclusive" class="form__checbox" id="allIclusive">
                 <label for="allIclusive" class="form__checkbox">All inclusive</label>
             </div>
             <div class="form__item">
-                <input type="checkbox" name="firstLine" class="form__checbox" id="allIclusive">
+                <input type="checkbox" name="firstLine" class="form__checbox" id="firstLine">
                 <label for="firstLine" class="form__checkbox">First line</label>
             </div>
+            <div class="form__item">
+                <input type="submit" value="Send" class="form__button">
+            </div>
         </form>
-        <main class="main">
-            <h1 class="main_title">Egypt tours</h1>
-            <ul class="nav nav_vertical">
-                <li class="nav__item">
-                    <a href="#first" class="nav__link">
-                        Пляжний відпочинок в Єгипті
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#second" class="nav__link">
-                        Дайвинг
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#third" class="nav__link">
-                        Ексурсії і розваги
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-
-                </li>
-                <li class="nav__item">
-                    <a href="" class="nav__link">
-
-                    </a>
-                </li>
-            </ul>
+        <ul class="nav nav_vertical">
+            <li class="nav__item">
+                <a href="#first" class="nav__link">
+                    Пляжний відпочинок в Єгипті
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#second" class="nav__link">
+                    Дайвинг
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="#third" class="nav__link">
+                    Ексурсії і розваги
+                </a>
+            </li>
+        </ul>        
+        <main class="main">           
             <article class="article">
                 <section class="article__section">
                     <h2 class="article__title" id="first"> Пляжний відпочинок в Єгипті</h2>
@@ -121,7 +115,7 @@
                         також морські прогулянки під вітрилами. Велика кількість дайвінг-центрів в Хургаді дає повну
                         свободу вибору - обираєте молодого красивого тренера або шукаєте програми для новачків - тут є
                         все.
-                    </p>
+                    </p>/div>
                 </section>
                 <section class="article__section">
                     <h2 class="article__title" id="third">Ексурсії і розваги</h2>

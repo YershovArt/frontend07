@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
-
+<header class="header">
+    <logo class="logo">
+        <a href="../index.html" class="logo__link">
+            <img src="../images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img">
+        </a>
+    </logo>
+    <ul class="nav">
+        <li class="nav__item">
+            <a href="../index.html" class="nav__link">
+                About Egypt
+            </a>
+        </li>
+    </ul>
+    <address class="contact">
+        <h3 class="contact__tilte">Contact us</h3>
+        <div class="contact__item">
+            <a href="mailto:egyptdnipro@gmail.com" class="contact__link">
+                egyptdnipro@gmail.com
+            </a>
+            <br>
+            <a href="tel:+13115552368" class="contact__link">
+                (311) 555-2368
+            </a>
+        </div>
+    </address>
+</header>
 <body>
-    <form action="https://fom.in.ua/echo" method="POST" class="form">
-        <div class="form__item">
-            <input type="radio" name="joinus" class="form__button">
+    <div class="wrapper">
+        <div class="form__item form__item_radio">
+            <input type="radio" class="form__button form__button_radio">
+            <form action="https://fom.in.ua/echo" method="POST" class="form form_signIn">
+                Sign in
+                <div class="form__item">
+                    <input type="email" name="emailLogin" class="form__input form__input--email" id="form__email--login"
+                        placeholder="Enter email" required>
+                </div>
+                <div class="form__item">
+                    <input type="password" name="passwordLogin" class="form__input form__input--password"
+                        placeholder="Enter password" id="form__password--login" required>
+                </div>
+                <div class="form__item">
+                    <input type="checkbox" name="rememberPassword" class="form__checbox">
+                    <span class="form__checkbox--label"> Remember password</span>
+                </div>
+                <div class="form__item">
+                    <input type="submit" value="Send" class="form__button form__button--send">
+                </div>
+            </form>
+            <form action="https://fom.in.ua/echo" method="POST" class="form form_signUp">
+                <div class="form__item">
+                    Sign up
+                    <input placeholder="Enter email" id="form__email--signin" class="form__input form__input--email"
+                        type="email" name="email--signin" required>
+                    </label>
+                </div>
+                <div class="form__item">
+                    <input type="password" name="password--signin" placeholder="Create password"
+                        id="form__password--signin" class="form__input form__input--password" required>
+                    </label>
+                </div>
+                <div class="form__item">
+                    <input placeholder="Confirm password" id="form__confirmPassword--signin"
+                        class="form__input form__input--password" type="password" name="confirmPassword--signin"
+                        required>
+                    </label>
+                </div>
+                <div class="form__item">
+                    <input type="submit" value="Send" class="form__button">
+                </div>
+            </form>
         </div>
-        <div class="form__item">
-            <input type="radio" name="joinus" class="form__button">
-        </div>
-        <div class="form__signIn">
-            <div class="form__item">
-                <input type="email" name="emailLogin" class="form__input form__input--email" id="form__email--login"
-                    placeholder="Enter email" required>
-            </div>
-            <div class="form__item">
-                <input type="password" name="passwordLogin" class="form__input form__input--password"
-                    placeholder="Enter password" id="form__password--login" required>
-            </div>
-            <div class="form__item">
-                <input type="checkbox" name="rememberPassword" class="form__checbox">
-                <span class="form__checkbox--label"> Remember password</span>
-            </div>
-            <div class="form__item">
-                <input type="submit" value="Send" class="form__button form__button--send">
-            </div>
-        </div>
-        <div class="form__signUp">
-            <div class="form__item">
-                <input placeholder="Enter email" id="form__email--signin" class="form__input form__input--email"
-                    type="email" name="email--signin" required>
-                </label>
-            </div>
-            <div class="form__item">
-                <input type="password" name="password--signin" placeholder="Create password" id="form__password--signin"
-                    class="form__input form__input--password" required>
-                </label>
-            </div>
-            <div class="form__item">
-                <input placeholder="Confirm password" id="form__confirmPassword--signin"
-                    class="form__input form__input--password" type="password" name="confirmPassword--signin" required>
-                </label>
-            </div>
-            <div class="form__item">
-                <input type="reset" value="Reset" class="form__button form__reset">
-            </div>
-            <div class="form__item">
-                <input type="submit" value="Send" class="form__button">
-            </div>
-        </div>
-    </form>
+        <footer class="footer">
+            <p class="footer_paragraph">Copyright &copy; 2022 | All rights reserved</p>
+        </footer>
+    </div>
 </body>
-
 </html>
