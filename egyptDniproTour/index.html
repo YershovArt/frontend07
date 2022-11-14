@@ -10,13 +10,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <a href="#booktour" class="fixed">
+        <a href="#top" class="fixed">
             <img src="images/airport.png" alt="plane" class="fixed_img">
         </a>
         <header class="header">
             <logo class="logo">
                 <a href="#" class="logo__link">
-                    <img src="images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img">
+                    <img src="images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img" id="top"><br>
+                    Egypt Tour
                 </a>
             </logo>
             <ul class="nav">
@@ -30,38 +31,42 @@
                         Join us
                     </a>
                 </li>
+                <li class="nav__item">
+                    <a class="nav__link">
+                        Contact us
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="mailto:egyptdnipro@gmail.com" class="submenu__link">
+                                egyptdnipro@gmail.com
+                            </a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="tel:+13115552368" class="submenu__link">
+                                (311) 555-2368
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-            <address class="contact">
-                <h3 class="contact__tilte">Contact us</h3>
-                <div class="contact__item">
-                    <a href="mailto:egyptdnipro@gmail.com" class="contact__link">
-                        egyptdnipro@gmail.com
-                    </a>
-                    <br>
-                    <a href="tel:+13115552368" class="contact__link">
-                        (311) 555-2368
-                    </a>
-                </div>
-            </address>
         </header>
         <h2 class="form__title"> Book tour</h2>
         <form action="https://fom.in.ua/echo" method="POST" class="form">
-            <div class="form__item" id="booktour">
+            <div class="form__item">
+                <label for="phone">phone:</label>
+                <input type="tel" name="phone" class="form__input" id="phone"  pattern=".*+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$" minlength="13" maxlength="13" placeholder="+380504511717" required>
                 <label for="start">trip-start:</label>
-                <input type="phone">
-                <label for="start">trip-start:</label>
-                <input type="date" id="start" name="trip-start" value="" min="2022-01-01" max="2025-12-31">
+                <input type="date" id="start" name="trip-start" min="2022-01-01" max="2025-12-31" required>
                 <label for="start">trip end:</label>
-                <input type="date" id="start" name="trip-end" value="" min="2022-01-01" max="2025-12-31">
-                <div class="form__item"></div>
+                <input type="date" id="start" name="trip-end" min="2022-01-01" max="2025-12-31" required>                
             </div>
             <div class="form__item">
-                <label for="adults" class="form__label">number of adults:</label>
-                <input type="number" value="" class="form__input" id="adults" name="adults" min="1" max="100">
-                <label for="kids" class="form__label">number of kids:</label>
-                <input type="number" value="" class="form__input" id="kids" name="kids" min="0" max="100">
-                <label for="hotelStars" class="form__label">number of kids:</label>
-                <input type="number" value="" class="form__input" id="stars" name="stars" min="0" max="5">
+                <label for="adults" class="form__label" required>Number of adults:</label>
+                <input type="number" class="form__input" id="adults" name="adults" min="1" max="100" required>
+                <label for="kids" class="form__label">Number of kids:</label>
+                <input type="number"  class="form__input" id="kids" name="kids" min="0" max="100">
+                <label for="hotelStars" class="form__label">Hotel stars:</label>
+                <input type="number" class="form__input" id="stars" name="stars" min="0" max="5">
             </div>
             <div class="form__item">
                 <input type="checkbox" name="allInclusive" class="form__checbox" id="allIclusive">
@@ -78,56 +83,52 @@
         <ul class="nav nav_vertical">
             <li class="nav__item">
                 <a href="#first" class="nav__link">
-                    Пляжний відпочинок в Єгипті
+                    Beach vacation in Egypt
                 </a>
             </li>
             <li class="nav__item">
                 <a href="#second" class="nav__link">
-                    Дайвинг
+                    Diving in Egypt
                 </a>
             </li>
             <li class="nav__item">
                 <a href="#third" class="nav__link">
-                    Ексурсії і розваги
+                    Excursions and entertainment in Egypt
                 </a>
             </li>
-        </ul>        
-        <main class="main">           
+        </ul>
+        <main class="main">
             <article class="article">
                 <section class="article__section">
-                    <h2 class="article__title" id="first"> Пляжний відпочинок в Єгипті</h2>
+                    <h2 class="article__title" id="first">Beach vacation in Egypt</h2>
                     <p class="article__paragraph">
                         <img src="images/Beach.jpg" alt="beach" class="article__img" width="30%">
-                        Насправді, купальний сезон в Єгипті не припиняється протягом всього року, навіть взимку
-                        єгипетські курорти продовжують щиро балувати туристів теплом і сонцем. Вважається, що
-                        найсприятливіший час для відвідування цієї країни - осінь. В цей час в Єгипті встановлюється не
-                        дуже спекотна, але комфортна для засмаги та купання погода.
+                        In fact, the bathing season in Egypt does not stop throughout the year, even in winter, Egyptian
+                        resorts continue to pamper tourists with warmth and sun. It is believed that the most favorable
+                        time for visiting this country is autumn. At this time in Egypt established not very hot, but
+                        comfortable weather for sunbathing and swimming.
                     </p>
                 </section>
                 <section class="article__section">
-                    <h2 class="article__title" id="second">Дайвинг</h2>
+                    <h2 class="article__title" id="second">Diving in Egypt</h2>
                     <p class="article__paragraph">
                         <img src="images/Diving.jpg" alt="diving" class="article__img" width="30%">
-                        Для тих, хто цнує красу підводного світу організовуються екскурсії в національний парк
-                        Рас-Мохаммед, який відомий великою різноманітністю коралів, а також іншими формами морської
-                        флори і фауни. Регіон Хургада також є центром для шанувальників водних видів спорту, таких як:
-                        віндсерфінг, кайтинг, глибоководна рибалка, плавання, всі можливі види снорклинга і дайвінгу, а
-                        також морські прогулянки під вітрилами. Велика кількість дайвінг-центрів в Хургаді дає повну
-                        свободу вибору - обираєте молодого красивого тренера або шукаєте програми для новачків - тут є
-                        все.
+                        Excursions to the national park are organized for those who appreciate the beauty of the
+                        underwater world Ras Mohammed, which is known for its great variety of corals as well as other
+                        forms of marine life flora and fauna. The Hurghada region is also a hub for water sports
+                        enthusiasts such as: windsurfing, kiting,deep-sea fishing, swimming, all possible types of
+                        snorkeling and diving.
                     </p>
                 </section>
                 <section class="article__section">
-                    <h2 class="article__title" id="third">Ексурсії і розваги</h2>
+                    <h2 class="article__title" id="third">Excursions and entertainment in Egypt</h2>
                     <p class="article__paragraph">
                         <img src="images/Excursion.jpg" alt="Entertaiment" class="article__img" width="30%">
-                        Для тих, хто цнує красу підводного світу організовуються екскурсії в національний парк
-                        Рас-Мохаммед, який відомий великою різноманітністю коралів, а також іншими формами морської
-                        флори і фауни. Регіон Хургада також є центром для шанувальників водних видів спорту, таких як:
-                        віндсерфінг, кайтинг, глибоководна рибалка, плавання, всі можливі види снорклинга і дайвінгу, а
-                        також морські прогулянки під вітрилами. Велика кількість дайвінг-центрів в Хургаді дає повну
-                        свободу вибору - обираєте молодого красивого тренера або шукаєте програми для новачків - тут є
-                        все.
+                        Water parks are also the most popular excursions on the Sinai Peninsula. A quad safari, during
+                        which you can meet the dawn, or a trip to St. Catherine's Monastery and Mount Moses, where you
+                        can watch the incredibly beautiful sunset, is ideal for youth recreation. Regarding excursions
+                        for families with children, it is worth paying attention to various sea trips, the show "1001
+                        Nights".
                     </p>
                 </section>
             </article>
