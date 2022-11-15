@@ -1,114 +1,106 @@
 /* main styles */
-/* 1 */ body {
-    background-color: #C2B280;
-    position: relative;
+/* 1 */ body {   
+    color: white; /* Цвет шрифта, чтобы выделялся на песочном */ 
+    background-color: #C2B280; /* Песочный цвет заднего фона */ 
+}
+
+/* 10 */ .fixed {
+    position: fixed; /* Делаю якорь для подъема вверх */ 
+    top: 40%; /* От верха на 40% */ 
+    right: 1%; /* От правого края на 1% */
+    outline: 1px solid black; /* Добавил обводочку */
+    background-color: white; /* Цвет заднего фона, чтобы выделялась иконка самолетика */
 }
 
 /* 10 */.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0% 5%;
-    border-bottom: 2px solid teal;
+    display: flex; /* Для правильного расположения элементов */     
+    justify-content: space-around; /* Для правильного расположения,равномерно распределить пространсво между ними */     
+    align-items: center; /* Ссыоки в центр */     
+    padding: 0% 5%;  /* Расширить заголовок сайта */
+    border-bottom: 2px solid teal; /* Отделить его границей */
 }
 
 /* 10 */.logo {
-    display: flex;
-    width: 33.3%;    
-    justify-content: space-around;   
+    width: 40%; /* Ширина блока с логотипом */
 }
 
-.nav__link,
+/* 10 */.nav__link,
 .logo__link,
 .submenu__link {
-    text-decoration: none;
-    color: black;
+    text-decoration: none; /* Убираем подчеркивание у сслыок */
+    color:white; /* Цвет шрифта, чтобы выделялся на песочном */
 }
 
 /* 10 */.logo__img {
-    width: 20%;
+    width: 20%; /* Приемлемый размер картинки логотипа сайта в контейнере */
+    border-radius: 50%; /* Делаю лого круглым */
+}
+
+/* 10 */ .nav__item {
+margin: 0 0 5%; 
+position: relative; /* Относительно позиционируем, чтобы появлялось подменю при наведении */
 }
 
 /* 10 */.submenu {
-    display: none;
+    display: none; /* Подменю с телефоном и почтой для связи с агенством */
 }
 
-.nav__item:hover  .submenu {
-    display: block;
-    position: absolute;
-    top: 83%;    
-    color: black;   
+/* 30 */ .nav__item:hover  .submenu {
+    position: absolute; /* Абсолютно позиционируем  */
+    display: block; /* При наведении на Contact us выпадает подменюшка с телефоном и почтой */
+    top: 83%;  /* Задаем положение относительно родителя */          
 }
 
-.fixed {
-    position: fixed;
-    top: 40%;
-    right: 1%;
-    outline: 1px solid black;
-    background-color: slategray;
+/* 1 */ h2 {
+    margin: 5% 0 5%; /* Сделал им отступы , чтобы немного отделить от остальных элементов */
+    font-size: 1.5rem;  /* Стандартный шрифт для заголовков Н2 */
+    text-align: center; /* Расположил заголовки по центру */
 }
 
-h2 {
-    text-align: center;
-    margin: 5% 0 0;
-    font-size: 3rem;
+/* 10 */ .form {
+    display: flex; /* Расположить элементы строкой в форме */
+    justify-content: space-around; /* Распределяю по строке с равным расстоянием между элементами */
+    flex-wrap: wrap; /* Для сохранения внешнего вида при уменьшении экрана, чтобы элементы переходили на другую строку */
+    padding: 2%;  /* Сделал форме отступы , чтобы немного отделить от остальных элементов */
+    background-color: #35382e; /* Цвет для выделения формы на странице */
 }
 
-.form {
-    padding: 2%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: teal;
+/* 10 */ .main {
+    margin: 0 auto; /* Располагая по центру */
+    width: 67%;  /* Ширинаб чтобы по центру расположить*/    
 }
 
-.main {
-    margin: 0 auto;
-    width: 67%;
-    display: flex;
-    flex-direction: row;
+/* 10 */ .nav_vertical {    
+    position: sticky; /* Чтобы при прокрутке замирало меню с оглавлением */
+    top: 43.9%; /* На каком удалении от верха окна держать */    
+    width: 16.4%; /* Ширина блока */   
+    border-radius: 5%; /* Радиус границы блока */
+    background-color: #35382e; /* Фон блока, для заметности на песочном фоне body */
 }
 
-.nav_vertical {
-    justify-content: space-around;
-    flex-direction: column;
-    border-radius: 5%;
-    position: sticky;
-    top: 43.9%;
-    right: 1%;
-    width: 16.4%;
-    background-color: teal;
+
+/* 10 */ .article__section {
+    padding: 5%; /* Паддинги для выделения секций */
+    border-bottom: 2px solid teal; /* Нижняя граница для  красоты */
 }
 
-.nav__item {
-    margin: 0 0 5%;
-    position: relative;
-}
-
-.article__section {
-    border-bottom: 2px solid teal;
-    padding: 5%;   
-}
-
-.article__img {
-    width: 100%;
-    border-radius: 5%;   
+/* 10 */ .article__img { 
+    width: 100%; /* Ширина картинки чтобы текст был внизу и так посчитал красивее */
+    border-radius: 5%; /* Закругляем углы картинок */  
 }
 
 /* 30 */.form__button_radio:checked~.form_signUp, 
 /* 10 */.form_signIn {
-    display: none;
+    display: none; /* Для второй страницы чтобы была возможность менять форму регистрации навход в кабинет , для уже зарегистрированного пользователя шаг 1 */
 }
 
 /* 30 */.form__button_radio:checked~.form_signIn {
-    display: flex;
+    display: flex; /* Для второй страницы чтобы была возможность менять форму регистрации навход в кабинет , для уже зарегистрированного пользователя шаг 2 */
 }
 
 /* 1 */footer {
     width: 100%;
     text-align: center;
     padding: 5% 0%;    
-    border: 2px solid teal;
+    border: 2px solid teal; /* Оформление футера */
 }
