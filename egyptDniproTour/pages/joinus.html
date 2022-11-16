@@ -9,46 +9,52 @@
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
-<div class="wrapper">
-<header class="header">
+    <div class="wrapper">
+        <header class="header">
             <logo class="logo">
-            <a href="#" class="logo__link">
-                <img src="../images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img" id="top"><br>
-            </a>
-        </logo>
-        <ul class="nav">
-            <li class="nav__item">
-                <a href="../index.html" class="nav__link">
-                    About Egypt
+                <a href="../index.html" class="logo__link">
+                    <img src="../images/EgyptTour-logos/EgyptTour-logos.jpeg" alt="logo" class="logo__img" id="top">
                 </a>
-            </li>           
-            <li class="nav__item">
-                <a class="nav__link">
-                    Contact us
-                </a>
-                <ul class="submenu">
-                    <li class="submenu__item">
-                        <a href="mailto:egyptdnipro@gmail.com" class="submenu__link">
-                            egyptdnipro@gmail.com
-                        </a>
-                    </li>
-                    <li class="submenu__item">
-                        <a href="tel:+13115552368" class="submenu__link">
-                            (311) 555-2368
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-        <div class="form__item form__item_radio">
-            <input type="radio" class="form__button form__button_radio">
-            Sign in
+            </logo>
+            <ul class="nav">
+                <li class="nav__item">
+                    <a href="../index.html" class="nav__link">
+                        About Egypt
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link">
+                        Contact us
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="mailto:egyptdnipro@gmail.com" class="submenu__link">
+                                egyptdnipro@gmail.com
+                            </a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="tel:+13115552368" class="submenu__link">
+                                (311) 555-2368
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <div class="radio">
+            <label for="radio" class="radio__label">Sign in</label>
+            <input type="radio" class="radio__button" id="radio">
             <form action="https://fom.in.ua/echo" method="POST" class="form form_signIn">
-                Sign in
+                Sign in:
                 <div class="form__item">
                     <input type="email" name="emailLogin" class="form__input form__input--email" id="form__email--login"
                         placeholder="Enter email" required>
+                </div>
+                <div class="form__item">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" class="form__input" id="phone"
+                        pattern=".*+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$" minlength="13" maxlength="13"
+                        placeholder="" required>
                 </div>
                 <div class="form__item">
                     <input type="password" name="passwordLogin" class="form__input form__input--password"
@@ -64,10 +70,15 @@
             </form>
             <form action="https://fom.in.ua/echo" method="POST" class="form form_signUp">
                 <div class="form__item">
-                    Sign up
+                    Sign up:
                     <input placeholder="Enter email" id="form__email--signin" class="form__input form__input--email"
                         type="email" name="email--signin" required>
                     </label>
+                </div>
+                <div class="form__item">                    
+                    <input type="tel" name="phone" class="form__input" id="phone"
+                        pattern=".*+[0-9]{3}\s?[0-9]{2}\s?[0-9]{3}\s?[0-9]{4,5}$" minlength="13" maxlength="13"
+                        placeholder="tel format:+380XXXXXXXXX" required>
                 </div>
                 <div class="form__item">
                     <input type="password" name="password--signin" placeholder="Create password"
@@ -85,10 +96,11 @@
                 </div>
             </form>
         </div>
-        <div class="figure"></div>
-        <img src="../images/EgyptTour-logos/EgyptTour-logos_transparent.png" alt="logo" class="figure__img">
+        <div class="figure">
+            <img src="../images/EgyptTour-logos/EgyptTour-logos_transparent.png" alt="logo" class="figure__img">
+        </div>
         <footer class="footer">
-            <p class="footer_paragraph">Copyright &copy; 2022 | All rights reserved</p>
+        <p class="footer_paragraph">Copyright &copy; 2022 | All rights reserved</p>
         </footer>
     </div>
 </body>
